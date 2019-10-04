@@ -1,13 +1,13 @@
-﻿using Provas_Online.Dominio.Enums;
+﻿using Provas_Online.Dominio.Entidades.Base;
+using Provas_Online.Dominio.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Provas_Online.Dominio.Entidades
 {
-    public class Questao
+    public class Questao : EntidadeBase
     {
-        public int Id { get; set; }
         public int Tipo { get; set; }
         public string Enunciado { get; set; }
         public TipoQuestaoEnum TipoQuestaoEnum { get; set; }
