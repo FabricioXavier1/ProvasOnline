@@ -1,0 +1,36 @@
+﻿@model Provas_Online.Site.Models.LoginModel;
+@{
+    ViewData["Title"] = "Login";
+    Layout = "";
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- Custom styles for this template -->
+    <link href="~/css/signin.css" rel="stylesheet" />
+</head>
+<body class="text-center">
+
+    <form class="form-signin" method="post" asp-action="Entrar" asp-controller="Login">
+        <h1 class="h3 mb-3 font-weight-normal">Entrar</h1>
+
+        <label asp-for="Email" class="sr-only"></label>
+        <input asp-for="Email" type="email" id="inputEmail" class="form-control" placeholder="Email" autofocus />
+        @Html.ValidationMessageFor(x => x.Email)
+
+        <label asp-for="Senha" class="sr-only"></label>
+        <input asp-for="Senha" type="password" id="inputPassword" class="form-control" placeholder="Senha" />
+        @Html.ValidationMessageFor(x => x.Senha)
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+    </form>
+
+</body>
+</html>
